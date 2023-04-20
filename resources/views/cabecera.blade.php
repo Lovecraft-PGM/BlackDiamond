@@ -70,8 +70,9 @@
         </div>
     </nav>
             @yield('contenido')
-        <footer>
-            @yield('footer')
+        <footer class="piePagina">
+            <div>terminos y condiciones</div>
+            <div>referencias</div>       
         </footer>
     </body>
 </html>

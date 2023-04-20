@@ -8,9 +8,14 @@
     line-height: 1.5;
 
 }
+a{
+    text-decoration: none;
+}
 
 body{
     background-color: #dddddd;
+    justify-content: center;
+    width: 100%;
 }
 
 
@@ -27,6 +32,7 @@ body{
     position: fixed;
     top: 0;
     margin: 0;
+    z-index: 10;
 }
 
 .logo {
@@ -124,7 +130,7 @@ body{
     
 }
 
-.cabecera a:hover #icono{
+.cabecera a:hover .icono{
     background-color: #e8a01071;
     box-shadow: 0 0 10px#ff6b01;
 
@@ -151,6 +157,7 @@ body{
     justify-content: center;
     background-color: #ffffff7b;
     width: 100%;
+    box-shadow: 0 0 6px #000000;
 }
 .seleccionComun{
     display: flex;
@@ -196,7 +203,7 @@ body{
 .seleccionComun:hover p{
     display: inline;
 }
-.seleccionComun:hover img {
+.seleccionComun:hover img{
     max-width: 200%;
     max-height: 200%;
     margin: 5px;
@@ -205,14 +212,326 @@ body{
     -moz-transition: all 500ms ease;
     -ms-transition: all 500ms ease;
     -o-transition: all 500ms ease;
-    z-index: 10;
+    z-index: 11;
     
 }
+
+/* ##################################################################################################### */
+
+.promociones{
+    margin: 5px 0 0 0;
+    padding: 0;
+    height: 10rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* ############################################### */
+.slider{
+    width: 768px;
+    height: 155px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #000000;
+
+}
+
+.slides{
+    width: 400%;
+    height: 10rem;
+    display: flex;
+
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 100%;
+    transition: 1000ms;
+    -webkit-transition: 1000ms;
+    -moz-transition: 1000ms;
+    -ms-transition: 1000ms;
+    -o-transition: 1000ms;
+}
+
+.slide img{
+    width: 768px;
+    height: 500px;
+}
+
+/* css pra manual slide  navegacion */
+
+
+.navegacion-manual{
+    position: absolute;
+    width: 768px;
+    margin-top: 8.5rem;
+    display: flex;
+    justify-content: center;
+}
+.promImg{
+    max-width: 100%;
+    max-height: 100%;
+    
+    border-radius: 5px;  
+}
+
+.manual-btn{
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s ;
+    box-shadow: 0px 0px 3px #000000;
+
+}
+.manual-btn:not(:last-child){
+    margin-right:40px;
+}
+
+
+.manual-btn:hover{
+    background: #ff6200;
+    box-shadow: 0px 0px 8px #000000;
+    border: solid 1px #000000;
+
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+/* css para navegacion automatica */
+
+
+/* ##################################################################################################### */
+.divisor{
+    width: auto;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.divi{
+    background-color: #e05d00;
+    margin: 1rem;
+    width: 90%;
+    height: 0.3rem;
+}
+
+.contenido{
+    display: flex;
+    min-height: 90%;
+}
+
+
+aside{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+
+}
+.divisorfiltro{
+    width: auto;
+    height: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.divifiltro{
+    background-color: #e05d00;
+    width: 90%;
+    height: 0.1rem;
+}
+.filtros{
+    padding: 20px;
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    background-color: #ffffffaf;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    justify-content: center;
+    align-content: center;
+}
+.encabezadoFiltro{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.encabezadoFiltro div{
+    width: 70%;
+}
+
+.encabezadoFiltro img{
+    width: 30px;
+    height: 30px;
+    margin: 1%;
+    cursor: pointer;
+
+
+}
+.tipoFiltro{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-color: 2px #00000069;
+    padding-left: 10px;
+}
+.tipoFiltro:hover{
+    background-color: #ff620082;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 20px;
+    box-shadow: 0 0 6px #000000;
+}
+
+.oculto{
+    display: none;
+}
+.tipoFiltro p{
+    margin: 0 10px 0 0;
+    color: #3e3e3ec9;
+}
+
+.tipoFiltro:hover p{
+    color: #1c1c1c;
+}
+
+
+
+
+main{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;;
+}
+.productos{
+    width: 15rem;
+    height: 20rem;
+    background-color:#ffffffda;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.productos:hover{
+    box-shadow: 0 0 10px #000000;
+    background-color: #ffffff;
+    transition: all 200ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -ms-transition: all 200ms;
+    -o-transition: all 200ms;
+}
+.productos:hover .precioProd{
+    transition: all 200ms;
+    font-size:24px;
+    text-shadow: 0 0 5px #31ff02;
+
+}
+
+.nombreProd{
+    color: #797979;
+    font-size: 14px;
+    overflow: visible;
+    max-height: 20%;
+}
+.precioProd{
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    color: #1b9400;
+    text-align: right;
+}
+
+
+.imgProd{
+    max-width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.paginacion{
+    width: 100%;
+    justify-content:center;
+    align-content: center;
+    display: flex;
+    margin: 1rem;
+    pading 3rem;
+}
+
+
+.piePagina {
+    background-color: #000000;
+    height: 50px;
+    display: flex;
+  }
+
+.piePagina div{
+    color:#ffffff;
+}
+
+  .paginaproduc{
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    background-color: #ff6b01c0;
+    color: #ffffff;
+    justify-content: center;
+    align-content: center;
+    margin: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 0 10px #000000;
+}
+
+.paginaproduc:hover{
+    cursor: pointer;
+    background-color: #000000;
+    box-shadow: 0 0 10px #000000;
+
+}
+/* ##################################################################################################### */
+
 
 /* medida para PC de escritorio */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
     h1 {
-        color: rgb(255, 98, 0);
+        color: #ff6200;
     }
 }
 
@@ -345,7 +664,7 @@ body{
 /* medida para celulares pequeños */
 @media screen and (max-width: 320px) {
     .buscador {
-        width: 60%;
+        width: 20%;
         margin-left: 0px;
     }
     .logo {
